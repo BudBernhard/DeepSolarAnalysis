@@ -1,5 +1,5 @@
 # DeepSolar Analysis
-This project was created as part of the [Flatiron School Data Science Intensive in DC](https://flatironschool.com/) Similar educational material can be found within the [class repo](https://github.com/learn-co-students/dc-ds-100719).
+This project was created as part of the [Flatiron School Data Science Fellowship in DC].(https://flatironschool.com/) The fellowships educational material can be found within the [class repo](https://github.com/learn-co-students/dc-ds-100719).
 
 #### -- Project Status: [Active]
 
