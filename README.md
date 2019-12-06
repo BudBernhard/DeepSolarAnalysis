@@ -4,7 +4,7 @@ This project was created as part of the [Flatiron School Data Science Intensive 
 #### -- Project Status: [Active]
 
 ## Project Intro/Objective
-The purpose of this project is to explore and better understand statistical modeling using the dataset created by the [Standford Deepsolar project](http://web.stanford.edu/group/deepsolar/home.html)
+The purpose of this project is to explore and better understand statistical modeling using the dataset created by the [Standford Deepsolar Project](http://web.stanford.edu/group/deepsolar/home.html)
 
 ### Methods Used
 * Data Engineering
