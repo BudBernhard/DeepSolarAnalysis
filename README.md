@@ -4,7 +4,7 @@ This project was created as part of the [Flatiron School Data Science Fellowship
 #### -- Project Status: [Active]
 
 ## Project Intro/Objective
-The purpose of this project is to explore and better understand statistical modeling using the dataset created by the [Standford Deepsolar Project](http://web.stanford.edu/group/deepsolar/home.html)
+The purpose of this project is to explore and better understand statistical modeling using the dataset created by the [Standford Deepsolar Project](http://web.stanford.edu/group/deepsolar/home.html) (VAGUE)
 
 ### Methods Used
 * Data Engineering
@@ -13,6 +13,7 @@ The purpose of this project is to explore and better understand statistical mode
 
 ### Technologies
 * Python
+** LIBRARIES (OR SEPERATE SECTION) 
 * Jupyter Notebook
 
 ## Getting Started
