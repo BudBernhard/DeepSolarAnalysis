@@ -3,22 +3,38 @@ DOCSTRING: This module contains functions to check for multicollinearity, deal w
 
 """
 
-def drop_rates_and_redundant_columns(df):
-    """Given that the data has information coded as both rates and absolute values, we separate out the columns and drop the redundant 
-    information coded as rates.
+def drop_redundant_columns(df):
+    """Given that the data has information coded as both rates and absolute values, we identified and dropped redundant 
+    information.
     
     df: original dataframe with both absolute values and rates.
     """
     cols = list(df.columns)
     
-    # identify rates columns
-    rates = []
-    for col in cols:
-        if 'rate' in col:
-            rates.append(col)
+    # identify redundant columns
+    redundant = ['education_less_than_high_school_rate',
+     'education_high_school_graduate_rate',
+     'education_college_rate',
+     'education_bachelor_rate',
+     'education_master_rate',
+     'education_professional_school_rate',
+     'education_doctoral_rate',
+     'race_white_rate',
+     'race_black_africa_rate',
+     'race_indian_alaska_rate',
+     'race_asian_rate',
+     'race_islander_rate',
+     'race_other_rate',
+     'race_two_more_rate','heating_fuel_gas_rate',
+     'heating_fuel_electricity_rate',
+     'heating_fuel_fuel_oil_kerosene_rate',
+     'heating_fuel_coal_coke_rate',
+     'heating_fuel_solar_rate',
+     'heating_fuel_other_rate',
+     'heating_fuel_none_rate']
     
     # drop the rates columns
-    new_df = df.drop(rates, axis = 1)
+    new_df = df.drop(redundant, axis = 1)
     
     # Remove all unique identifiers, objects, and booleans
     new_df = new_df.drop(columns=['county',
