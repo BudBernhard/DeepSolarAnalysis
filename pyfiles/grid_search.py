@@ -33,7 +33,7 @@ params_rf = {'rf__n_estimators': [10, 50],
                  'rf__max_depth': [5, 8, 12], 
                  'rf__min_samples_split':[2, 5, 10],
                  'rf__min_samples_leaf': [1, 2, 5, 10],
-                 'rf__max_features': ['log2', 'sqrt', None]}
+                 'rf__max_features': ['log2', 'sqrt']}
 
 pipe_svc = Pipeline([('svc', SVC())])
 params_svc = {'svc__C': [.001, .01, 0.1, 1, 10, 100, 1000],
