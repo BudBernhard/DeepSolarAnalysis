@@ -41,7 +41,8 @@ def drop_redundant_columns(df):
                           'state',
                          'electricity_price_transportation',
                          'voting_2016_dem_win',
-                         'voting_2012_dem_win'])
+                         'voting_2012_dem_win',
+                        'tile_count'])
     return new_df
 
 def create_has_tiles_target_column(df):
