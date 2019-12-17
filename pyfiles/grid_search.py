@@ -29,17 +29,17 @@ params_dt = {'dt__max_depth': [2, 4, 8],
 
 
 pipe_rf = Pipeline([('rf', RandomForestClassifier())])
-params_rf = {'classifier__n_estimators': [10, 100, 1000],
-                 'classifier__max_depth': [5, 8, 15, 25, 30], 
-                 'classifier__min_samples_split':[2, 5, 10, 15, 100],
-                 'classifier__min_samples_leaf': [1, 2, 5, 10],
-                 'classifier__max_features': ['log2', 'sqrt', None]}
+params_rf = {'rf__n_estimators': [10, 50],
+                 'rf__max_depth': [5, 8, 12], 
+                 'rf__min_samples_split':[2, 5, 10],
+                 'rf__min_samples_leaf': [1, 2, 5, 10],
+                 'rf__max_features': ['log2', 'sqrt', None]}
 
 pipe_svc = Pipeline([('svc', SVC())])
-params_svc = {'classifier__C': [.001, .01, 0.1, 1, 10, 100, 1000],
-                   'classifier__gamma': ['auto','scale'],
-                   'classifier__class_weight':['balanced', None]},
+params_svc = {'svc__C': [.001, .01, 0.1, 1, 10, 100, 1000],
+                   'svc__gamma': ['auto','scale'],
+                   'svc__class_weight':['balanced', None]},
 
-pipe_knn = Pipeline([('classifier', KNeighborsClassifier())]),
-params_knn = {'classifier__n_neighbors':[2,4,8,16],
-                'classifier__p':[2,3]}
+pipe_knn = Pipeline([('knn', KNeighborsClassifier())]),
+params_knn = {'knn__n_neighbors':[2,4,8,16],
+                'knn__p':[2,3]}
