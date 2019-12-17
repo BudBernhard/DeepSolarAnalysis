@@ -29,10 +29,8 @@ params_dt = {'dt__max_depth': [2, 4, 8],
 
 
 pipe_rf = Pipeline([('rf', RandomForestClassifier())])
-params_rf = {'rf__n_estimators': [10, 50],
-                 'rf__max_depth': [5, 8, 12], 
-                 'rf__min_samples_split':[2, 5, 10],
-                 'rf__min_samples_leaf': [1, 2, 5, 10],
+params_rf = {'rf__n_estimators': [10, 30],
+                 'rf__min_samples_leaf': [20, 50, 70],
                  'rf__max_features': ['log2', 'sqrt']}
 
 pipe_svc = Pipeline([('svc', SVC())])
