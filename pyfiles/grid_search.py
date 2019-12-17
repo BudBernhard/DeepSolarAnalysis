@@ -24,8 +24,7 @@ def find_hyperparameters(pipe, params, X_train, y_train):
 
 pipe_dt = Pipeline([('dt', DecisionTreeClassifier())])
 params_dt = {'dt__max_depth': [2, 4, 8],
-                 'dt__min_samples_split': [2, 5, 10],
-                'dt__min_samples_leaf':[1, 5, 10]}
+                'dt__min_samples_leaf':[50, 80]}
 
 
 pipe_rf = Pipeline([('rf', RandomForestClassifier())])
@@ -33,10 +32,8 @@ params_rf = {'rf__n_estimators': [10, 30],
                  'rf__min_samples_leaf': [20, 50, 70],
                  'rf__max_features': ['log2', 'sqrt']}
 
-pipe_svc = Pipeline([('svc', SVC())])
-params_svc = {'svc__C': [.001, .01, 0.1, 1, 10, 100, 1000],
-                   'svc__gamma': ['auto','scale'],
-                   'svc__class_weight':['balanced', None]},
+pipe_svc = Pipeline([('svc', SVC(kernel = 'rbf'))])
+params_svc = {'svc__C': [0.1, 1, 10, 100]},
 
 pipe_knn = Pipeline([('knn', KNeighborsClassifier())]),
 params_knn = {'knn__n_neighbors':[2,4,8,16],
