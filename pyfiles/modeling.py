@@ -26,10 +26,10 @@ def pick_sampling_method(X_train, y_train, method = ['oversampling', 'undersampl
     smt = SMOTE()
     
     if method == 'oversampling':
-        X, y = ros.fit_resample(X_train, y_train)
+        a, b = ros.fit_resample(X_train, y_train)
     elif method == 'undersampling':
-        X, y = rus.fit_resample(X_train, y_train)
+        a, b = rus.fit_resample(X_train, y_train)
     else:
-        X, y = smt.fit_sample(X_train, y_train)
+        a, b = smt.fit_sample(X_train, y_train)
     
-    return X, y
+    return a, b
